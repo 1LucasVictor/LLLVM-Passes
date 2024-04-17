@@ -2,7 +2,7 @@
 # See: https://github.com/banach-space/llvm-tutor/blob/master/CMakeLists.txt
 #===============================================================================
 cmake_minimum_required(VERSION 3.13.4)
-project(CG-analyser)
+project(CG-analyzer)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -89,4 +89,4 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/lib")
 # available for the sub-projects.
 #===============================================================================
 add_subdirectory(lib)
-add_subdirectory(tool)
+#add_subdirectory(tool)
