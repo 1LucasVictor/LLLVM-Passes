@@ -1,39 +1,36 @@
 #ifndef CG_ANALYZER
 #define CG_ANALYZER
 
-#include "llvm/IR/InstrTypes.h"
+#include "llvm/Pass.h"
 #include "llvm/IR/PassManager.h"
+#include "llvm/Analysis/CallGraph.h"
+#include "llvm/Analysis/CallGraphSCCPass.h"
+#include "llvm/Support/GraphWriter.h"
+#include "llvm/Support/raw_ostream.h"
 
 namespace cganalyzer_nm {
 
+// class CGAnalyzer : public llvm::AnalysisInfoMixin<CGAnalyzer> {
+// public:
+//   using Result = llvm::SmallVector<llvm::BinaryOperator *, 0>;
+//   Result run(llvm::Function &F, llvm::FunctionAnalysisManager &FAM);
+//   static llvm::AnalysisKey Key;
+// };
 
-class CGAnalyzer : public llvm::AnalysisInfoMixin<CGAnalyzer> {
-  public:
-    /// Result of the analysis: a list of instructions of type
-    /// "BinaryOperator", opcode "add" and constant operands.
-    using Result = llvm::SmallVector<llvm::BinaryOperator *, 0>;
-    /// Traverses the function \p F, collecting all the "add" instructions
-    /// inside it.
-    ///
-    /// \returns a list of all the collected "add" instructions.
-    Result run(llvm::Function &F, llvm::FunctionAnalysisManager &FAM);
-    // A special type used by analysis passes to provide an address that
-    // identifies that particular analysis pass type.
-    static llvm::AnalysisKey Key;
-};
-
-
-
-class CGAnalyzerPrinterPass
-    : public llvm::PassInfoMixin<CGAnalyzerPrinterPass> {
+class CGAnalyzerPass : public llvm::PassInfoMixin<CGAnalyzerPass> {
 public:
-  explicit CGAnalyzerPrinterPass(llvm::raw_ostream &OS) : OS(OS) {}
+  explicit CGAnalyzerPass(llvm::raw_ostream &OS) : OS(OS) {}
 
-  llvm::PreservedAnalyses run(llvm::Function &F,
-                              llvm::FunctionAnalysisManager &FAM);
+  llvm::PreservedAnalyses run(llvm::Module &M,
+                              llvm::ModuleAnalysisManager &MAM);
+
+  // Without isRequired returning true, this pass will be skipped for functions
+  // decorated with the optnone LLVM attribute. Note that clang -O0 decorates
+  // all functions with optnone.
+  static bool isRequired() { return true; }
 
 private:
   llvm::raw_ostream &OS;
 };
-} 
+} // namespace cganalyzer_nm
 #endif

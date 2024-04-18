@@ -415,4 +415,13 @@ lib/CMakeFiles/CGAnalyzer.dir/CGAnalyzerPlugin.cpp.o: \
  /home/lucas/llvm-project/llvm/include/llvm/Transforms/Utils/ValueMapper.h \
  /home/lucas/llvm-project/llvm/include/llvm/Passes/PassPlugin.h \
  /home/lucas/llvm-project/llvm/include/llvm/Support/DynamicLibrary.h \
- /home/lucas/LLVM-Passes/lib/../include/CGAnalyzer.hpp
+ /home/lucas/LLVM-Passes/lib/../include/CGAnalyzer.hpp \
+ /home/lucas/llvm-project/llvm/include/llvm/Analysis/CallGraph.h \
+ /home/lucas/llvm-project/llvm/include/llvm/Support/GraphWriter.h \
+ /home/lucas/llvm-project/llvm/include/llvm/Support/DOTGraphTraits.h \
+ /home/lucas/llvm-project/llvm/include/llvm/Support/FileSystem.h \
+ /home/lucas/llvm-project/llvm/include/llvm/Support/Chrono.h \
+ /home/lucas/llvm-project/llvm/include/llvm/Support/FileSystem/UniqueID.h \
+ /usr/include/c++/11/stack /usr/include/c++/11/deque \
+ /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
+ /usr/include/c++/11/bits/stl_stack.h
