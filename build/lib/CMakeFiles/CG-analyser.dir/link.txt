@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -Wall    -fdiagnostics-color=always -fno-rtti -fvisibility-inlines-hidden -g -shared  -o libCG-analyser.so CMakeFiles/CG-analyser.dir/CGAnalyzer.cpp.o CMakeFiles/CG-analyser.dir/CGAnalyzerPass.cpp.o CMakeFiles/CG-analyser.dir/CGAnalyzerPlugin.cpp.o   -L/home/lucas/llvm-project/build/./lib 

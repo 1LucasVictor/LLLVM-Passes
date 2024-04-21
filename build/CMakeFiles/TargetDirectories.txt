@@ -1,8 +1,0 @@
-/home/lucas/LLVM-Passes/build/CMakeFiles/intrinsics_gen.dir
-/home/lucas/LLVM-Passes/build/CMakeFiles/omp_gen.dir
-/home/lucas/LLVM-Passes/build/CMakeFiles/acc_gen.dir
-/home/lucas/LLVM-Passes/build/CMakeFiles/edit_cache.dir
-/home/lucas/LLVM-Passes/build/CMakeFiles/rebuild_cache.dir
-/home/lucas/LLVM-Passes/build/lib/CMakeFiles/CGAnalyzer.dir
-/home/lucas/LLVM-Passes/build/lib/CMakeFiles/edit_cache.dir
-/home/lucas/LLVM-Passes/build/lib/CMakeFiles/rebuild_cache.dir
