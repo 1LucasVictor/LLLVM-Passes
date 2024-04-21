@@ -3,7 +3,6 @@
 #===============================================================================
 add_library(CGAnalyzer MODULE
     CGAnalyzer.cpp
-    CGAnalyzerPass.cpp
     CGAnalyzerPlugin.cpp)
 
 target_include_directories(CGAnalyzer PRIVATE

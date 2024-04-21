@@ -11,7 +11,7 @@ using namespace llvm;
 
 bool registerPipeline(StringRef Name, ModulePassManager &MAM,
                       ArrayRef<PassBuilder::PipelineElement>) {
-    if (Name == "print<add-const>") {
+    if (Name == "fExtractor") {
         MAM.addPass(cganalyzer_nm::CGAnalyzerPass(errs()));
         return true;
     }
