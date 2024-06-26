@@ -10,14 +10,7 @@
 #include <vector>
 
 namespace cganalyzer_nm {
-
-// class CGAnalyzer : public llvm::AnalysisInfoMixin<CGAnalyzer> {
-// public:
-//   using Result = llvm::SmallVector<llvm::BinaryOperator *, 0>;
-//   Result run(llvm::Function &F, llvm::FunctionAnalysisManager &FAM);
-//   static llvm::AnalysisKey Key;
-// };
-
+  
 class CGAnalyzerPass : public llvm::PassInfoMixin<CGAnalyzerPass> {
 public:
   explicit CGAnalyzerPass(llvm::raw_ostream &OS) : OS(OS) {}
